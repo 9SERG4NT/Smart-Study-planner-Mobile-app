@@ -1,0 +1,19 @@
+# Ignore dependencies
+node_modules/
+
+# Ignore native directories
+android/
+ios/
+
+# Ignore local Expo state
+.expo/
+
+# Ignore build artifacts
+jdk17/
+*.apk
+*.aab
+dist/
+
+# Other
+.DS_Store
+*.log
