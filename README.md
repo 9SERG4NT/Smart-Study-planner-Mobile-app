@@ -2,7 +2,7 @@
 
 A high-performance, intuitive mobile application designed to help students organize their academic life, track tasks, and optimize study sessions with a built-in focus timer. Built with **React Native** and **Expo**.
 
-[**🚀 Live Build / Download APK**](https://expo.dev/accounts/serg4nt/projects/smart-study-planner/builds/73c46d84-3160-4865-9525-deda46a90ca2)
+[**🚀 Live Build / Download APK**](https://expo.dev/artifacts/eas/iNqCN4f6yPmG4jqrZeFXxr.apk)
 
 ## ✨ Key Features
 

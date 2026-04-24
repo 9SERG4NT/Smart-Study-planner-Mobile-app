@@ -1,13 +1,10 @@
 import { DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { Stack } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 
 import { TaskProvider } from '@/context/TaskContext';
-
-export const unstable_settings = {
-  anchor: '(tabs)',
-};
+import { FocusGuardProvider } from '@/context/FocusGuardContext';
 
 const WhiteTheme = {
   ...DefaultTheme,
@@ -24,13 +21,16 @@ const WhiteTheme = {
 export default function RootLayout() {
   return (
     <TaskProvider>
-      <ThemeProvider value={WhiteTheme}>
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="task/add" options={{ presentation: 'modal', title: 'Add Task' }} />
-        </Stack>
-        <StatusBar style="dark" />
-      </ThemeProvider>
+      <FocusGuardProvider>
+        <ThemeProvider value={WhiteTheme}>
+          <Stack>
+            <Stack.Screen name="(tabs)"              options={{ headerShown: false }} />
+            <Stack.Screen name="task/add"            options={{ presentation: 'modal', title: 'Add Task' }} />
+            <Stack.Screen name="focusguard-settings" options={{ presentation: 'modal', title: 'FocusGuard Settings' }} />
+          </Stack>
+          <StatusBar style="dark" />
+        </ThemeProvider>
+      </FocusGuardProvider>
     </TaskProvider>
   );
 }
